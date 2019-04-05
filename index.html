@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        body * {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+        .container {
+            display: inline-block;
+            width: 400px;
+            margin: 40px calc(50% - 200px);
+        }
+            .container > * {
+                display: inline-block;
+                float: left;
+                width: 100%;
+                margin: 0 0 40px 0;
+            }
+            .container > .img {
+                height: 200px;
+                background-color: rgb(16, 245, 35);
+            }
+
+            @media (min-width:600px) {
+                .container {
+                    width: 500px;
+                    margin: 40px calc(50% - 250px);
+                }
+                .container > * {
+                    width: 45%;
+                    display: contents;
+                    float: right;
+                    margin-bottom: 40px;
+                }
+                    .container > *::after {
+                        display: block;
+                        padding-bottom: 40px;
+                        content: "";
+                    }
+                .container > .img {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 10%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img"></div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iusto consequuntur tempora facilis</p>
+        
+        <div class="img"></div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iusto consequuntur tempora facilis</p>
+        <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Atque, officiis repellat!</li>
+            <li>Est, itaque incidunt.</li>
+        </ul>
+        <div class="img"></div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iusto consequuntur tempora facilis</p>
+    </div>
+    
+</body>
+</html>
